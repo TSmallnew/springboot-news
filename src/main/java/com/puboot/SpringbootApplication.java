@@ -30,7 +30,7 @@ public class SpringbootApplication {
         }
         log.info("\n----------------------------------------------------------\n\t" +
                 "Application is running! Access URLs:\n\t" +
-                "Local: \t\thttp://localhost:" + port + contextPath + "/\n\t" +
+                "Local: \t\thttp://localhost:" + port + contextPath + "/admin\n\t" +
                 "External: \thttp://" + ip + ':' + port + contextPath + "/\n" +
                 "----------------------------------------------------------");
     }
