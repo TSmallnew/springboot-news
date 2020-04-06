@@ -1,0 +1,20 @@
+<div th:fragment="pagebar"  th:if="${page!=null && page.pages gt 1}" id="pagebar">
+
+    <link rel="stylesheet" th:href="@{/libs/theme/pblog/css/jquery.pagination.css}" />
+    <script th:src="@{/libs/theme/pblog/js/jquery.pagination.min.js}"></script>
+
+    <div id="pagination" class="page"></div>
+
+    <script>
+        $(function () {
+            var pageUrl = '[[${pageUrl}]]';
+            $("#pagination").pagination({
+                currentPage: [[${page.current}]],
+                totalPage: [[${page.pages}]],
+                callback: function (pageNo) {
+                    window.location.href = (ctx + pageUrl + '/' +  pageNo).replace('//', '/');
+                }
+            });
+        })
+    </script>
+</div>
