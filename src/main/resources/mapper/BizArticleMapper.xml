@@ -191,56 +191,75 @@
 		l.lookCount DESC
 	</select>
 
-	<select id="getById" parameterType="int" resultMap="rm">
-		SELECT
-		a.*,
-		category.id AS b_category_id,
+	<select id="getById" parameterType="int" resultMap="rm">SELECT
+	articletag.*,
+t.`name` AS tag_name,
+	t.description AS tag_description,
+	t.create_time AS tag_create_time,
+	t.update_time AS tag_update_time
+from
+(
+SELECT
+	atag.tag_id,
+	article.*
+FROM
+(
+	SELECT
+		a.*, category.id AS b_category_id,
 		category.`name` AS b_category_name,
 		category.description AS b_category_description,
-		t.id AS tag_id,
-		t.`name` AS tag_name,
-		t.description AS tag_description,
-		t.create_time AS tag_create_time,
-		t.update_time AS tag_update_time,
 		l.lookCount AS look_count,
 		c.commentCount AS comment_count,
 		love.loveCount AS love_count
-		FROM
+	FROM
 		biz_article a
-		INNER JOIN biz_category category ON a.category_id = category.id
-		INNER JOIN biz_article_tags atag ON a.id = atag.article_id
-		INNER JOIN biz_tags t ON atag.tag_id = t.id
-		LEFT JOIN (
+	INNER JOIN biz_category category ON a.category_id = category.id
+	LEFT JOIN (
 		SELECT
-		l.article_id,
-		IFNULL(count(1), 0) AS lookCount
+			l.article_id,
+			IFNULL(count(1), 0) AS lookCount
 		FROM
-		biz_article_look l
+			biz_article_look l
 		GROUP BY
-		l.article_id
-		) l ON a.id = l.article_id
-		LEFT JOIN (
+			l.article_id
+	) l ON a.id = l.article_id
+	LEFT JOIN (
 		SELECT
-		sid,
-		IFNULL(count(1), 0) AS commentCount
+			sid,
+			IFNULL(count(1), 0) AS commentCount
 		FROM
-		biz_comment c
-		WHERE c.status = 1
-		GROUP BY
-		sid
-		) c ON a.id = c.sid
-		LEFT JOIN (
-		SELECT
-		l.biz_id,
-		IFNULL(count(1), 0) AS loveCount
-		FROM
-		biz_love l
-		WHERE l.biz_type=1 AND l.status=1
-		GROUP BY
-		l.biz_id
-		) love ON a.id = love.biz_id
+			biz_comment c
 		WHERE
+			c. STATUS = 1
+		GROUP BY
+			sid
+	) c ON a.id = c.sid
+	LEFT JOIN (
+		SELECT
+			l.biz_id,
+			IFNULL(count(1), 0) AS loveCount
+		FROM
+			biz_love l
+		WHERE
+			l.biz_type = 1
+		AND l. STATUS = 1
+		GROUP BY
+			l.biz_id
+	) love ON a.id = love.biz_id
+	WHERE
 		a.id = #{id}
+) article
+
+LEFT JOIN
+	biz_article_tags atag
+on
+	article.id = atag.article_id
+)articletag
+
+LEFT JOIN
+	biz_tags t
+on
+articletag.tag_id = t.id
 	</select>
 
 	<delete id="deleteBatch" parameterType="map">

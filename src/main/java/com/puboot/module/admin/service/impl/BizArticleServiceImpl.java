@@ -43,7 +43,9 @@ public class BizArticleServiceImpl extends ServiceImpl<BizArticleMapper, BizArti
 
             for (BizArticle bizArticle : list) {
                 BizArticle tagArticle = tagMap.get(bizArticle.getId());
-                bizArticle.setTags(tagArticle.getTags());
+                if (null != tagArticle){
+                    bizArticle.setTags(tagArticle.getTags());
+                }
             }
         }
         return list;

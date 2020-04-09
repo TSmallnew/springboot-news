@@ -81,56 +81,60 @@
             formatter: function (value) {
                 return value.name;
             }
-        }, {
-            field: 'tags',
-            title: '标签',
-            class: 'table-tags',
-            align : "center",
-            formatter: function (tags) {
-                var tagHtml = '';
-                if (tags) {
-                    for (var i = 0, len = tags.length; i < len; i++) {
-                        var tag = tags[i];
-                        tagHtml += '<a class="btn btn-default btn-xs"> ' + tag.name + '</a> ';
-                    }
-                }
-                return tagHtml;
-            }
-        },{
-            field: 'slider',
-            title: '轮播',
-            align : "center",
-
-            formatter : function(value) {
-                if(value){
-                    return '是'
-                }else{
-                    return '否'
-                }
-            }
-        },{
-            field: 'top',
-            title: '置顶',
-            align : "center",
-            formatter : function(value) {
-                if(value){
-                    return '是'
-                }else{
-                    return '否'
-                }
-            }
-        },{
-            field: 'recommended',
-            title: '推荐',
-            align : "center",
-            formatter : function(value) {
-                if(value){
-                    return '是'
-                }else{
-                    return '否'
-                }
-            }
-        },{
+        },
+        // {
+        //     field: 'tags',
+        //     title: '标签',
+        //     class: 'table-tags',
+        //     align : "center",
+        //     formatter: function (tags) {
+        //         var tagHtml = '';
+        //         if (tags) {
+        //             for (var i = 0, len = tags.length; i < len; i++) {
+        //                 var tag = tags[i];
+        //                 tagHtml += '<a class="btn btn-default btn-xs"> ' + tag.name + '</a> ';
+        //             }
+        //         }
+        //         return tagHtml;
+        //     }
+        // },{
+        //     field: 'slider',
+        //     title: '轮播',
+        //     align : "center",
+        //
+        //     formatter : function(value) {
+        //         if(value){
+        //             return '是'
+        //         }else{
+        //             return '否'
+        //         }
+        //     }
+        // },{
+        //     field: 'top',
+        //     title: '置顶',
+        //     align : "center",
+        //     formatter : function(value) {
+        //         if(value){
+        //             return '是'
+        //         }else{
+        //             return '否'
+        //         }
+        //     }
+        // },
+        // {
+        //     field: 'recommended',
+        //     title: '推荐',
+        //     hidden :true,
+        //     align : "center",
+        //     formatter : function(value) {
+        //         if(value){
+        //             return '是'
+        //         }else{
+        //             return '否'
+        //         }
+        //     }
+        // },
+        {
             field: 'status',
             title: '状态',
             align : "center",
@@ -141,19 +145,20 @@
                    return '草稿'
                }
             }
-        },{
-            field: 'lookCount',
-            title: '浏览',
-            align : "center",
-        },{
-            field: 'commentCount',
-            title: '评论',
-            align : "center",
-        },{
-            field: 'loveCount',
-            title: '喜欢',
-            align : "center",
         },
+        // {
+        //     field: 'lookCount',
+        //     title: '浏览',
+        //     align : "center",
+        // },{
+        //     field: 'commentCount',
+        //     title: '评论',
+        //     align : "center",
+        // },{
+        //     field: 'loveCount',
+        //     title: '喜欢',
+        //     align : "center",
+        // },
         {
             field : 'operation',
             title : '操作',

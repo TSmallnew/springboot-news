@@ -54,7 +54,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group display-none">
                         <div class="col-xs-12">
                             <label class="control-label label-four">文章标签:</label>
                             <div class="tags checkbox icheck ml80">
@@ -73,14 +73,16 @@
                             </div>
                         </div>
                     </div>-->
-                    <div class="form-group">
+                    <div class="form-group display-none">
                         <div class="col-xs-12">
                             <label class="control-label label-four">文章封面:</label>
                             <div class="input-group ml80" style="position: relative">
-                                <input type="text"  class="form-control" name="coverImage" id="coverImage" placeholder="文章封面地址" require="">
-                                <div class="btn btn-default input-group-btn jax-upload-btn" style="min-width: 50px">
-                                    <i class="fa fa-cloud-upload upload-img-btn"></i>
-                                </div>
+                                <input type="file"  class="form-control" name="imageFile" id="coverImage" placeholder="文章封面地址" require="" accept="image/*" /> <br>
+                                <!--    <input type="text"  class="form-control" name="coverImage" id="coverImage" placeholder="文章封面地址" require="">
+
+                                  <div class="btn btn-default input-group-btn jax-upload-btn" style="min-width: 50px">
+                                        <i class="fa fa-cloud-upload upload-img-btn"></i>
+                                    </div>-->
                             </div>
                         </div>
 
@@ -98,6 +100,7 @@
                         </div>
 
                     </div>
+                    <!--
                     <div class="form-group">
                         <div class="col-xs-12">
                             <label class="control-label label-four">是否轮播:</label>
@@ -110,8 +113,8 @@
                                 </label>
                             </div>
                         </div>
-                    </div>
-                    <div class="form-group">
+                    </div>-->
+                    <div class="form-group display-none">
                         <div class="col-xs-12">
                             <label class="control-label label-four">是否置顶:</label>
                             <div class="tags ml80 checkbox icheck">
@@ -125,7 +128,7 @@
                         </div>
 
                     </div>
-                    <div class="form-group">
+                    <div class="form-group display-none">
                         <div class="col-xs-12">
                             <label class="control-label label-four">是否推荐:</label>
                             <div class="tags ml80 checkbox icheck">
@@ -154,7 +157,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 article-extra mt20">
-                    <div class="form-group">
+                    <div class="form-group ">
                         <div class="col-xs-12">
                             <label class="control-label label-four">概要:</label>
                             <div class="ml80">
@@ -162,14 +165,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="form-group">
+                    <!--
+                    <div class="form-group ">
                         <div class="col-xs-12">
                             <label class="control-label label-four">关键词:</label>
                             <div class="ml80">
                                 <textarea type="text" rows="2" class="form-control" name="keywords" require="" placeholder="文章关键词（SEO优化）"></textarea>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
             </form>
         </div>
@@ -254,15 +258,16 @@
             if(content){
                 $("#articleContentMd").val(content);
                 $("#articleContent").val(content);
-                var tags =[];
-                $('input[name="tag"]:checked').each(function(){
-                    tags.push($(this).val());
-                });
-                if(tags.length>0){
-                    return true;
-                }else{
-                    layer.msg("请选择文章标签！")
-                }
+                // var tags =[];
+                // $('input[name="tag"]:checked').each(function(){
+                //     tags.push($(this).val());
+                // });
+                // if(tags.length>0){
+                //     return true;
+                // }else{
+                //     layer.msg("请选择文章标签！")
+                // }
+                return true;
             }else{
                 layer.msg("请输入文章内容！")
             }

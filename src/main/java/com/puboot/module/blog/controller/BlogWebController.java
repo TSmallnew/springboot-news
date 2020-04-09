@@ -90,8 +90,8 @@ public class BlogWebController {
        ;
         try {
 //            User user = (User) SecurityUtils.getSubject().getPrincipal();
-            bizArticle.setCreateTime(new Date());
-            bizArticle.setUpdateTime(new Date());
+//            bizArticle.setCreateTime(new Date());
+//            bizArticle.setUpdateTime(new Date());
             bizArticle.setUserId(jsonObject.getString("userId"));
             bizArticle.setAuthor(jsonObject.getString("author"));
             bizArticle.setContent(jsonObject.getString("content"));

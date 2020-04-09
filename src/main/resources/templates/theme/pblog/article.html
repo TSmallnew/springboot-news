@@ -38,7 +38,7 @@
 					</div>
 					<!--<div class="article-zan-shang">
 						<span class="article-zan"><i class="fa fa-thumbs-o-up"></i>点赞</span> <span>打赏</span>
-					</div>-->
+					</div>
 					<div class="thumbs-content">
 						<span class="thumbs-button fa fa-thumbs-up"> 点赞 <span id="loveCount" th:text="${article.loveCount}"></span></span>
 						<span class="reward-button fa fa-money"> 打赏
@@ -48,35 +48,35 @@
 						<span class="reward-bottom"></span>
 						<span class="reward-bottom-top"></span>
 						</span>
-					</div>
+					</div>-->
 				</div>
-				<div th:if="${article.comment==1}" id="comment" class="comment comment-main">
-					<div class="comment-title">发表评论</div>
-					<form id="comment-form" class="form-horizontal mt-10">
-						<input id="articleId" name="sid" type="hidden" th:value="${article.id}">
-						<div id="user-name-content" class="user-name-content">欢迎您：<b id="user-name"></b></div>
-						<div class="form-group" id="user-info" style="display: none">
-							<div class="col-sm-4">
-								<input id="nickname" type="text" class="form-control"  name="nickname" placeholder="昵称(必填)">
-							</div>
-							<div class="col-sm-4">
-								<input id="qq" type="text" class="form-control"  name="qq" placeholder="QQ（可获取头像和昵称）">
-							</div>
-							<div class="col-sm-4">
-								<input id="email" type="text" class="form-control"  name="email" placeholder="邮箱">
-							</div>
-						</div>
-						<div class="form-group">
-							<div class="col-xs-12">
-								<textarea name="content" id="comment-textarea"></textarea>
-							</div>
-						</div>
-						<div><button id="submitCommentBtn" type="button" class="btn btn-pri">发表评论</button></div>
-					</form>
-					<hr class="hr0 mt-15"/>
-					<ul id="comment-ul" class="comment">
-					</ul>
-				</div>
+				<!--<div th:if="${article.comment==1}" id="comment" class="comment comment-main">-->
+					<!--<div class="comment-title">发表评论</div>-->
+					<!--<form id="comment-form" class="form-horizontal mt-10">-->
+						<!--<input id="articleId" name="sid" type="hidden" th:value="${article.id}">-->
+						<!--<div id="user-name-content" class="user-name-content">欢迎您：<b id="user-name"></b></div>-->
+						<!--<div class="form-group" id="user-info" style="display: none">-->
+							<!--<div class="col-sm-4">-->
+								<!--<input id="nickname" type="text" class="form-control"  name="nickname" placeholder="昵称(必填)">-->
+							<!--</div>-->
+							<!--<div class="col-sm-4">-->
+								<!--<input id="qq" type="text" class="form-control"  name="qq" placeholder="QQ（可获取头像和昵称）">-->
+							<!--</div>-->
+							<!--<div class="col-sm-4">-->
+								<!--<input id="email" type="text" class="form-control"  name="email" placeholder="邮箱">-->
+							<!--</div>-->
+						<!--</div>-->
+						<!--<div class="form-group">-->
+							<!--<div class="col-xs-12">-->
+								<!--<textarea name="content" id="comment-textarea"></textarea>-->
+							<!--</div>-->
+						<!--</div>-->
+						<!--<div><button id="submitCommentBtn" type="button" class="btn btn-pri">发表评论</button></div>-->
+					<!--</form>-->
+					<!--<hr class="hr0 mt-15"/>-->
+					<!--<ul id="comment-ul" class="comment">-->
+					<!--</ul>-->
+				<!--</div>-->
 			</div>
 			<div th:replace="home/fragments/sidebar :: sidebar"></div>
 		</div>

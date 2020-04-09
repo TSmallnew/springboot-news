@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.annotation.TableField;
 import com.puboot.module.admin.vo.base.BaseVo;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -38,6 +39,9 @@ public class BizArticle extends BaseVo {
     private Integer comment;
     private BigDecimal jd;
     private  BigDecimal wd;
+
+    @TableField(exist = false)
+    private MultipartFile imageFile;
     @TableField(exist = false)
     private Integer lookCount = 0;
     @TableField(exist = false)

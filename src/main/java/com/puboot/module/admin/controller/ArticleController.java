@@ -43,7 +43,7 @@ public class ArticleController {
     private final BizTagsService tagsService;
     private final SysConfigService configService;
 
-    @PostMapping("list")
+    @PostMapping("/list")
     @ResponseBody
     public PageResultVo loadArticle(ArticleConditionVo articleConditionVo, Integer pageNumber, Integer pageSize) {
         articleConditionVo.setSliderFlag(true);
@@ -72,7 +72,7 @@ public class ArticleController {
             bizArticle.setUserId(user.getUserId());
             bizArticle.setAuthor(user.getNickname());
             BizArticle article = articleService.insertArticle(bizArticle);
-            articleTagsService.insertList(tag, article.getId());
+//            articleTagsService.insertList(tag, article.getId());
             return ResultUtil.success("保存文章成功");
         } catch (Exception e) {
             return ResultUtil.error("保存文章失败");
