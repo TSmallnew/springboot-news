@@ -118,8 +118,8 @@ public class ArticleController {
     @ResponseBody
     public ResponseVo edit(BizArticle article, Integer[] tag) {
         articleService.updateById(article);
-        articleTagsService.removeByArticleId(article.getId());
-        articleTagsService.insertList(tag, article.getId());
+//        articleTagsService.removeByArticleId(article.getId());
+//        articleTagsService.insertList(tag, article.getId());
         return ResultUtil.success("编辑文章成功");
     }
 

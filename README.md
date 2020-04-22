@@ -2,7 +2,6 @@
 ### 瀑布内容管理系统，采用SpringBoot + Apache Shiro + Mybatis Plus + Thymeleaf 实现的内容管理系统(附带权限管理)，是搭建博客、网站的不二之选。
 
 #### 项目介绍
-预览：[https://www.puboot.com](https://www.puboot.com)<br/>
 pb-cms,致力于开发最精简、实用的CMS管理系统，适合搭建博客、企业网站等，完美自适应。<br/>
 满足您的强迫症(包括我自己的强迫症[手动狗头])<br/>
 #### 技术栈
@@ -20,15 +19,10 @@ Spring Boot、Shiro、MyBatis-Plus、Druid、Redis、MySQL、thymeleaf<br/>
 2. 程序员的编辑器：markdown编辑器**_simplemde_**，无压力编写markdown格式文章。
 3. 精简的评论模块（基于cookie实现的用户信息记忆功能）。
 4. 简单配置，即可运行。（见下文使用说明）。
-5. 集成七牛云存储。
+5. 集成七牛云存储。 
 6. 完备的后台权限管理模块。
 7. 完全遵循Alibaba代码规范
 
-项目前台预览：[https://www.puboot.com](https://www.puboot.com)<br/>
-项目后台预览：[https://www.puboot.com/admin](https://www.puboot.com/admin)<br/>
-
-**用户密码**
-账号：guest 密码：123456<br/>
 
 **如果喜欢，多多分享！！多多Star！！有你的支持，是我更新的最大动力！感谢~**
 

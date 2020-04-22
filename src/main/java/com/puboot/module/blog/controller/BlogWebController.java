@@ -8,8 +8,10 @@ import com.puboot.common.util.Pagination;
 import com.puboot.common.util.ResultUtil;
 import com.puboot.exception.ArticleNotFoundException;
 import com.puboot.module.admin.model.BizArticle;
+import com.puboot.module.admin.model.BizCategory;
 import com.puboot.module.admin.service.BizArticleService;
 import com.puboot.module.admin.service.BizArticleTagsService;
+import com.puboot.module.admin.service.BizCategoryService;
 import com.puboot.module.admin.service.BizThemeService;
 import com.puboot.module.admin.vo.ArticleConditionVo;
 import com.puboot.module.admin.vo.base.ResponseVo;
@@ -44,6 +46,8 @@ public class BlogWebController {
     private final BizArticleService bizArticleService;
     private final BizThemeService bizThemeService;
 
+    private final BizCategoryService categoryService;
+
     /**
      * 首页
      *
@@ -62,16 +66,35 @@ public class BlogWebController {
 
     @PostMapping("/blog/news")
     @ResponseBody
-    public ResponseVo loadArticle() {
+    public ResponseVo loadArticle(Integer categoryId,Integer status) {
         Integer pageNumber =1;
         Integer pageSize =10;
         ArticleConditionVo vo = new ArticleConditionVo();
+        if (null != categoryId){
+            vo.setCategoryId(categoryId);
+        }
+        if (null == status){
+            vo.setStatus(1);
+        }
+        else
+            vo.setStatus(status);
         vo.setSliderFlag(true);
         IPage<BizArticle> page = new Pagination<>(pageNumber, pageSize);
         List<BizArticle> articleList = bizArticleService.findByCondition(page, vo);
         String json = JSON.toJSONString(articleList);
         Object data =  JSONObject.parse(json);
         return  ResultUtil.success("成功",data);
+    }
+
+    @PostMapping("/blog/category/list")
+    @ResponseBody
+    public ResponseVo loadCategory() {
+        BizCategory bizCategory = new BizCategory();
+        bizCategory.setStatus(CoreConst.STATUS_VALID);
+        List<BizCategory> bizCategoryList = categoryService.selectCategories(bizCategory);
+        String json = JSON.toJSONString(bizCategoryList);
+        Object data =  JSONObject.parse(json);
+        return ResultUtil.success("成功",data);
     }
 
     @PostMapping("/blog/add")
