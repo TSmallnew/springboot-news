@@ -140,10 +140,22 @@
             align : "center",
             formatter : function(value) {
                if(value){
-                   return '已发布'
+                   return '已发布';
                }else{
                    return '草稿'
                }
+            }
+        },
+        {
+            field: 'shName',
+            title: '审核人员',
+            align : "center",
+            formatter : function(value) {
+                if(value){
+                    return value;
+                }else{
+                    return '未审核'
+                }
             }
         },
         // {

@@ -23,6 +23,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -52,7 +53,11 @@ public class ArticleController {
         return ResultUtil.table(articleList, page.getTotal());
     }
 
-    /*文章*/
+    /**
+     * 新增文章
+     * @param model
+     * @return
+     */
     @GetMapping("/add")
     public String addArticle(Model model) {
         BizCategory bizCategory = new BizCategory();
@@ -71,8 +76,11 @@ public class ArticleController {
             User user = (User) SecurityUtils.getSubject().getPrincipal();
             bizArticle.setUserId(user.getUserId());
             bizArticle.setAuthor(user.getNickname());
+            if (bizArticle.getStatus()==1){
+                bizArticle.setShName(user.getUsername());
+                bizArticle.setShTime(new Date());
+            }
             BizArticle article = articleService.insertArticle(bizArticle);
-//            articleTagsService.insertList(tag, article.getId());
             return ResultUtil.success("保存文章成功");
         } catch (Exception e) {
             return ResultUtil.error("保存文章失败");
@@ -87,36 +95,42 @@ public class ArticleController {
         bizCategory.setStatus(CoreConst.STATUS_VALID);
         List<BizCategory> bizCategories = categoryService.selectCategories(bizCategory);
         model.addAttribute("categories", JSON.toJSONString(bizCategories));
-        List<BizTags> sysTags = tagsService.list();
+//        List<BizTags> sysTags = tagsService.list();
         /*方便前端处理回显*/
-        List<BizTags> aTags = new ArrayList<>();
-        List<BizTags> sTags = new ArrayList<>();
-        boolean flag;
-        for (BizTags sysTag : sysTags) {
-            flag = false;
-            for (BizTags articleTag : bizArticle.getTags()) {
-                if (articleTag.getId().equals(sysTag.getId())) {
-                    BizTags tempTags = new BizTags();
-                    tempTags.setId(sysTag.getId());
-                    tempTags.setName(sysTag.getName());
-                    aTags.add(tempTags);
-                    sTags.add(tempTags);
-                    flag = true;
-                    break;
-                }
-            }
-            if (!flag) {
-                sTags.add(sysTag);
-            }
-        }
-        bizArticle.setTags(aTags);
-        model.addAttribute("tags", sTags);
+//        List<BizTags> aTags = new ArrayList<>();
+//        List<BizTags> sTags = new ArrayList<>();
+//        boolean flag;
+//        for (BizTags sysTag : sysTags) {
+//            flag = false;
+//            for (BizTags articleTag : bizArticle.getTags()) {
+//                if (articleTag.getId().equals(sysTag.getId())) {
+//                    BizTags tempTags = new BizTags();
+//                    tempTags.setId(sysTag.getId());
+//                    tempTags.setName(sysTag.getName());
+//                    aTags.add(tempTags);
+//                    sTags.add(tempTags);
+//                    flag = true;
+//                    break;
+//                }
+//            }
+//            if (!flag) {
+//                sTags.add(sysTag);
+//            }
+//        }
+//        bizArticle.setTags(aTags);
+//        model.addAttribute("tags", sTags);
         return CoreConst.ADMIN_PREFIX + "article/detail";
     }
 
     @PostMapping("/edit")
     @ResponseBody
     public ResponseVo edit(BizArticle article, Integer[] tag) {
+
+        if (article.getStatus()==1){
+            User user = (User) SecurityUtils.getSubject().getPrincipal();
+            article.setShName(user.getUsername());
+            article.setShTime(new Date());
+        }
         articleService.updateById(article);
 //        articleTagsService.removeByArticleId(article.getId());
 //        articleTagsService.insertList(tag, article.getId());

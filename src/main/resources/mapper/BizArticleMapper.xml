@@ -9,6 +9,8 @@
 		<result property="author" jdbcType="VARCHAR" column="author"/>
 		<result property="jd" jdbcType="DECIMAL" column="jd"/>
 		<result property="wd" jdbcType="DECIMAL" column="wd"/>
+		<result property="shName" jdbcType="DECIMAL" column="sh_name"/>
+		<result property="shTime" jdbcType="TIMESTAMP" column="sh_time"/>
 		<result property="coverImage" jdbcType="VARCHAR" column="cover_image"/>
 		<result property="qrcodePath" jdbcType="VARCHAR" column="qrcode_path"/>
 		<result property="isMarkdown" jdbcType="BIT" column="is_markdown"/>
@@ -50,6 +52,8 @@
 		author,
 		jd,
 		wd,
+		shName,
+		shTIme,
 		cover_image,
 		qrcode_path,
 		content,
@@ -272,40 +276,40 @@ articletag.tag_id = t.id
 		</foreach>
 	</delete>
 
-	<select id="getSiteInfo" resultType="map">
-		SELECT
-		a.article_count AS articleCount,
-		t.tag_count AS tagCount,
-		category.category_count AS categoryCount,
-		c.comment_count AS commentCount
-		FROM
-		(
-		SELECT
-		COUNT(1) AS article_count
-		FROM
-		biz_article
-		WHERE `status` = 1
-		) a,
-		(
-		SELECT
-		COUNT(1) AS tag_count
-		FROM
-		biz_tags
-		) t,
-		(
-		SELECT
-		COUNT(1) AS category_count
-		FROM
-		biz_category
-		WHERE status = 1
-		) category,
-		(
-		SELECT
-		COUNT(1) AS comment_count
-		FROM
-		biz_comment
-		WHERE `status` = 1
-		) c
-	</select>
+	<!--<select id="getSiteInfo" resultType="map">-->
+		<!--SELECT-->
+		<!--a.article_count AS articleCount,-->
+		<!--t.tag_count AS tagCount,-->
+		<!--category.category_count AS categoryCount,-->
+		<!--c.comment_count AS commentCount-->
+		<!--FROM-->
+		<!--(-->
+		<!--SELECT-->
+		<!--COUNT(1) AS article_count-->
+		<!--FROM-->
+		<!--biz_article-->
+		<!--WHERE `status` = 1-->
+		<!--) a,-->
+		<!--(-->
+		<!--SELECT-->
+		<!--COUNT(1) AS tag_count-->
+		<!--FROM-->
+		<!--biz_tags-->
+		<!--) t,-->
+		<!--(-->
+		<!--SELECT-->
+		<!--COUNT(1) AS category_count-->
+		<!--FROM-->
+		<!--biz_category-->
+		<!--WHERE status = 1-->
+		<!--) category,-->
+		<!--(-->
+		<!--SELECT-->
+		<!--COUNT(1) AS comment_count-->
+		<!--FROM-->
+		<!--biz_comment-->
+		<!--WHERE `status` = 1-->
+		<!--) c-->
+	<!--</select>-->
 </mapper>
 

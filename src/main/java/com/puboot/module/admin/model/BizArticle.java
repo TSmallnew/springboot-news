@@ -7,6 +7,7 @@ import lombok.EqualsAndHashCode;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.math.BigDecimal;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -39,6 +40,8 @@ public class BizArticle extends BaseVo {
     private Integer comment;
     private BigDecimal jd;
     private  BigDecimal wd;
+    private String shName;
+    private Date shTime;
 
     @TableField(exist = false)
     private MultipartFile imageFile;
