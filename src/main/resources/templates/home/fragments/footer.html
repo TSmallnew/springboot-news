@@ -64,10 +64,10 @@
     </div>
 </div>
 <div th:fragment="copyrightDark"  class="copyright-dark copyright-section">
-    <p>Copyright © [[${#dates.format(new java.util.Date().getTime(), 'yyyy')}]]. [[${@module.get('sysConfig').SITE_NAME}]] · Powered by H< </p>
+    <p>Copyright © [[${#dates.format(new java.util.Date().getTime(), 'yyyy')}]]. [[${@module.get('sysConfig').SITE_NAME}]] < </p>
 </div>
 <div th:fragment="copyrightLight"  class="copyright-light copyright-section">
-    <p>Copyright © [[${#dates.format(new java.util.Date().getTime(), 'yyyy')}]]. [[${@module.get('sysConfig').SITE_NAME}]] · Powered by H </p>
+    <p>Copyright © [[${#dates.format(new java.util.Date().getTime(), 'yyyy')}]]. [[${@module.get('sysConfig').SITE_NAME}]] </p>
 </div>
 <div th:fragment="copyrightCommon"  class="copyright-common copyright-section">
     <script>
@@ -84,5 +84,5 @@
             $(".main-content").css("min-height",contentMinHeight)
         })
     </script>
-    <p>Copyright © [[${#dates.format(new java.util.Date().getTime(), 'yyyy')}]]. [[${@module.get('sysConfig').SITE_NAME}]] · Powered by H </p>
+    <p>Copyright © [[${#dates.format(new java.util.Date().getTime(), 'yyyy')}]]. [[${@module.get('sysConfig').SITE_NAME}]]  </p>
 </div>
