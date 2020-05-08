@@ -11,9 +11,9 @@ import org.springframework.stereotype.Component;
 /**
  * thymeleaf调用后台的工具类
  *
- * @author Linzhaoguan
+ * @author
  * @version V1.0
- * @date 2019年9月11日
+ * @date
  */
 @Component("module")
 @AllArgsConstructor

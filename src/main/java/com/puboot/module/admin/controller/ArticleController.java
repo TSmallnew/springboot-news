@@ -29,9 +29,9 @@ import java.util.List;
 /**
  * 后台文章管理
  *
- * @author Linzhaoguan
+ * @author
  * @version V1.0
- * @date 2019年9月11日
+ * @date
  */
 @Controller
 @RequestMapping("article")

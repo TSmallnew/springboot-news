@@ -1,9 +1,9 @@
 package com.puboot.module.admin.vo;
 
 /**
- * @author Linzhaoguan
+ * @author
  * @version V1.0
- * @date 2019年9月11日
+ * @date
  */
 public class PermissionTreeListVo {
     private Integer id;

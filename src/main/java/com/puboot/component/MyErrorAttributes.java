@@ -9,9 +9,9 @@ import java.util.Map;
 /**
  * 自定义错误信息
  *
- * @author Linzhaoguan
+ * @author
  * @version V1.0
- * @date 2019年9月11日
+ * @date
  */
 @Component
 public class MyErrorAttributes extends DefaultErrorAttributes {

@@ -10,9 +10,9 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * @author Linzhaoguan
+ * @author
  * @version V1.0
- * @date 2019年9月11日
+ * @date
  */
 @Data
 public class User implements Serializable {

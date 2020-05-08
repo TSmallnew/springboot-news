@@ -7,9 +7,9 @@ import org.springframework.stereotype.Component;
 /**
  * spring容器持有类，可以获取spring管理的bean
  *
- * @author LinZhaoguan
+ * @author
  * @version V1.0
- * @date 2019年9月11日
+ * @date
  */
 @Component
 public class SpringContextHolder implements ApplicationContextAware {

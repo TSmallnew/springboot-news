@@ -37,9 +37,9 @@ import java.util.Set;
 /**
  * 自定义shiro realm，进行鉴权和认证
  *
- * @author LinZhaoguan
+ * @author
  * @version V1.0
- * @date 2019年9月11日
+ * @date
  */
 @Component
 public class MyShiroRealm extends AuthorizingRealm {

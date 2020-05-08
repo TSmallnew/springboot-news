@@ -9,9 +9,9 @@ import java.util.List;
 /**
  * 返回结果封装对象
  *
- * @author Linzhaoguan
+ * @author
  * @version V1.0
- * @date 2019年9月11日
+ * @date
  */
 @UtilityClass
 public class ResultUtil {

@@ -4,9 +4,9 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.puboot.module.admin.model.UserRole;
 
 /**
- * @author Linzhaoguan
+ * @author
  * @version V1.0
- * @date 2019年9月11日
+ * @date
  */
 public interface UserRoleMapper extends BaseMapper<UserRole> {
 }

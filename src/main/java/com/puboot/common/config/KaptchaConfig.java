@@ -10,9 +10,9 @@ import java.util.Properties;
 /**
  * 验证码配置
  *
- * @author LinZhaoguan
+ * @author
  * @version V1.0
- * @date 2019年9月11日
+ * @date
  */
 @Component
 public class KaptchaConfig {

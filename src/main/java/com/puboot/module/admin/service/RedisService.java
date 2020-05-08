@@ -5,9 +5,9 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author Linzhaoguan
+ * @author
  * @version V1.0
- * @date 2019年9月11日
+ * @date
  */
 public interface RedisService {
     <T> void set(String key, T value);

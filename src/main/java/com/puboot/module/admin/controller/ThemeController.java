@@ -18,9 +18,9 @@ import java.util.Date;
 /**
  * 后台主题配置
  *
- * @author Linzhaoguan
+ * @author
  * @version V1.0
- * @date 2019年9月11日
+ * @date
  */
 @Controller
 @RequestMapping("theme")

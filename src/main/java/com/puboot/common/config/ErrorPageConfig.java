@@ -9,9 +9,9 @@ import org.springframework.stereotype.Component;
 /**
  * 配置系统后台出错时跳转到的错误页面
  *
- * @author LinZhaoguan
+ * @author
  * @version V1.0
- * @date 2019年9月11日
+ * @date
  */
 @Component
 public class ErrorPageConfig implements ErrorPageRegistrar {

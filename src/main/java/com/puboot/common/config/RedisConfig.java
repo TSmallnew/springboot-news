@@ -21,9 +21,9 @@ import java.time.Duration;
 /**
  * Redis缓存时间、序列化、反序列化等配置
  *
- * @author LinZhaoguan
+ * @author
  * @version V1.0
- * @date 2019年9月11日
+ * @date
  */
 @Configuration
 @EnableCaching

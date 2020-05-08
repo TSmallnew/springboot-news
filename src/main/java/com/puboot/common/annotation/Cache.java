@@ -6,9 +6,9 @@ import java.util.concurrent.TimeUnit;
 /**
  * Redis缓存自定义注解
  *
- * @author LinZhaoguan
+ * @author
  * @version V1.0
- * @date 2019年9月11日
+ * @date
  */
 @Target({ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)

@@ -11,9 +11,9 @@ import org.apache.shiro.util.ByteSource;
 /**
  * 密码加密工具类
  *
- * @author Linzhaoguan
+ * @author
  * @version V1.0
- * @date 2019年9月11日
+ * @date
  */
 @UtilityClass
 public class PasswordHelper {

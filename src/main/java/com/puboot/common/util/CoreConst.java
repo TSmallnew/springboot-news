@@ -5,9 +5,9 @@ import lombok.experimental.UtilityClass;
 /**
  * 常量工具类
  *
- * @author Linzhaoguan
+ * @author
  * @version V1.0
- * @date 2019年9月11日
+ * @date
  */
 @UtilityClass
 public class CoreConst {

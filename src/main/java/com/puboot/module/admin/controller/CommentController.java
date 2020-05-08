@@ -25,9 +25,9 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * 后台评论管理
  *
- * @author Linzhaoguan
+ * @author
  * @version V1.0
- * @date 2019年9月11日
+ * @date
  */
 @RestController
 @RequestMapping("comment")

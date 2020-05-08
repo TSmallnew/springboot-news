@@ -28,9 +28,9 @@ import java.util.Map;
 /**
  * Shiro相关配置
  *
- * @author LinZhaoguan
+ * @author
  * @version V1.0
- * @date 2019年9月11日
+ * @date
  */
 @Configuration
 public class ShiroConfig {

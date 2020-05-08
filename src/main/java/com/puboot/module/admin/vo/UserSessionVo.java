@@ -3,9 +3,9 @@ package com.puboot.module.admin.vo;
 import lombok.Data;
 
 /**
- * @author Linzhaoguan
+ * @author
  * @version V1.0
- * @date 2019年9月11日
+ * @date
  */
 @Data
 public class UserSessionVo {

@@ -28,9 +28,9 @@ import java.util.Map;
 /**
  * 踢出用户
  *
- * @author Linzhaoguan
+ * @author
  * @version V1.0
- * @date 2019年9月11日
+ * @date
  */
 @Slf4j
 @Setter

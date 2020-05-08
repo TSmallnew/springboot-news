@@ -19,9 +19,9 @@ import java.util.Map;
 /**
  * 初始化、动态更新shiro用户权限
  *
- * @author Linzhaoguan
+ * @author
  * @version V1.0
- * @date 2019年9月11日
+ * @date
  */
 @Service
 @AllArgsConstructor

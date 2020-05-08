@@ -9,9 +9,9 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 /**
  * spring事务、MybatisPlus分页插件、mybatis包扫描等配置
  *
- * @author LinZhaoguan
+ * @author
  * @version V1.0
- * @date 2019年9月11日
+ * @date
  */
 @EnableTransactionManagement
 @Configuration

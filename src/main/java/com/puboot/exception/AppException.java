@@ -4,9 +4,9 @@ package com.puboot.exception;
 /**
  * 自定义异常
  *
- * @author Linzhaoguan
+ * @author
  * @version V1.0
- * @date 2019年9月11日
+ * @date
  */
 public class AppException extends RuntimeException {
 

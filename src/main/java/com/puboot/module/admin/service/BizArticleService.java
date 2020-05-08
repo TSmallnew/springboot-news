@@ -8,9 +8,9 @@ import com.puboot.module.admin.vo.ArticleConditionVo;
 import java.util.List;
 
 /**
- * @author Linzhaoguan
+ * @author
  * @version V1.0
- * @date 2019年9月11日
+ * @date
  */
 public interface BizArticleService extends IService<BizArticle> {
 

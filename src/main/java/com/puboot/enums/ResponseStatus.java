@@ -6,9 +6,9 @@ import lombok.Getter;
 /**
  * 接口响应状态枚举类
  *
- * @author Linzhaoguan
+ * @author
  * @version V1.0
- * @date 2019年9月11日
+ * @date
  */
 @Getter
 @AllArgsConstructor

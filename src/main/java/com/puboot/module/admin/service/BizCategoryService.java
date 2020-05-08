@@ -6,9 +6,9 @@ import com.puboot.module.admin.model.BizCategory;
 import java.util.List;
 
 /**
- * @author Linzhaoguan
+ * @author
  * @version V1.0
- * @date 2019年9月11日
+ * @date
  */
 public interface BizCategoryService extends IService<BizCategory> {
 

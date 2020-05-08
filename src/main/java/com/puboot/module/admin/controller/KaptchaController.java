@@ -19,9 +19,9 @@ import java.io.IOException;
 /**
  * 获取验证码图片
  *
- * @author Linzhaoguan
+ * @author
  * @version V1.0
- * @date 2019年9月11日
+ * @date
  */
 @Slf4j
 @Controller

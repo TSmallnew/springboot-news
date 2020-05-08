@@ -9,9 +9,9 @@ import org.springframework.web.servlet.ModelAndView;
 /**
  * 后台SQL监控
  *
- * @author Linzhaoguan
+ * @author
  * @version V1.0
- * @date 2019年9月11日
+ * @date
  */
 @Controller
 @RequestMapping("/database")

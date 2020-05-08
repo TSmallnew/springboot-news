@@ -17,9 +17,9 @@ import java.util.Map;
 /**
  * 统一错误跳转页面，如403，404，500
  *
- * @author Linzhaoguan
+ * @author
  * @version V1.0
- * @date 2019年9月11日
+ * @date
  */
 @Controller
 @RequestMapping("/error")

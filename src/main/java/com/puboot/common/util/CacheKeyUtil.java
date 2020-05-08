@@ -8,9 +8,9 @@ import org.springframework.validation.support.BindingAwareModelMap;
 /**
  * 缓存key工具类
  *
- * @author Linzhaoguan
+ * @author
  * @version V1.0
- * @date 2019年9月11日
+ * @date
  */
 @UtilityClass
 public class CacheKeyUtil {

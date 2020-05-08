@@ -4,9 +4,9 @@ package com.puboot.exception;
 /**
  * 自定义文章未找到异常
  *
- * @author Linzhaoguan
+ * @author
  * @version V1.0
- * @date 2019年9月11日
+ * @date
  */
 public class ArticleNotFoundException extends RuntimeException {
 

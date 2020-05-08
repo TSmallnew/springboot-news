@@ -6,9 +6,9 @@ import com.puboot.module.admin.model.BizArticleLook;
 import java.util.Date;
 
 /**
- * @author Linzhaoguan
+ * @author
  * @version V1.0
- * @date 2019年9月11日
+ * @date
  */
 public interface BizArticleLookService extends IService<BizArticleLook> {
 

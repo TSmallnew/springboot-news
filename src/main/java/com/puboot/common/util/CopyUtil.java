@@ -14,9 +14,9 @@ import java.util.Objects;
 /**
  * Bean拷贝工具类
  *
- * @author Linzhaoguan
+ * @author
  * @version V1.0
- * @date 2019年9月11日
+ * @date
  */
 @Slf4j
 @UtilityClass

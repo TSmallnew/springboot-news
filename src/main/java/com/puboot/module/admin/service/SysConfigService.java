@@ -6,9 +6,9 @@ import com.puboot.module.admin.model.SysConfig;
 import java.util.Map;
 
 /**
- * @author Linzhaoguan
+ * @author
  * @version V1.0
- * @date 2019年9月11日
+ * @date
  */
 public interface SysConfigService extends IService<SysConfig> {
 

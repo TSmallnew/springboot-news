@@ -554,7 +554,7 @@ INSERT INTO `sys_config` VALUES (5, 'SITE_NAME', '预见未来', 1, '网站名�
 INSERT INTO `sys_config` VALUES (6, 'SITE_KWD', 'Java JavaScript Spring SpringBoot Vue React', 1, '网站关键字');
 INSERT INTO `sys_config` VALUES (7, 'SITE_DESC', '个人博客网站，技术交流，经验分享。', 1, '网站描述');
 INSERT INTO `sys_config` VALUES (8, 'SITE_PERSON_PIC', 'http://img.puboot.com/ava.jpg', 1, '站长头像');
-INSERT INTO `sys_config` VALUES (9, 'SITE_PERSON_NAME', 'LinZhaoguan', 1, '站长名称');
+INSERT INTO `sys_config` VALUES (9, 'SITE_PERSON_NAME', 'uuu', 1, '站长名称');
 INSERT INTO `sys_config` VALUES (10, 'SITE_PERSON_DESC', '90后少年，热爱写bug，热爱编程，热爱学习，分享一些个人经验，共同学习，少走弯路。Talk is cheap, show me the code!', 1, '站长描述');
 INSERT INTO `sys_config` VALUES (11, 'BAIDU_PUSH_URL', 'http://data.zz.baidu.com/urls?site=https://www.puboot.com&token=EjnfUGGJ1drKk4Oy', 1, '百度推送地址');
 COMMIT;

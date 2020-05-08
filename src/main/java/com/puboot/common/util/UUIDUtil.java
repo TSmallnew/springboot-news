@@ -7,9 +7,9 @@ import java.util.UUID;
 /**
  * 生成UUID工具类
  *
- * @author Linzhaoguan
+ * @author
  * @version V1.0
- * @date 2019年9月11日
+ * @date
  */
 @UtilityClass
 public class UUIDUtil {
